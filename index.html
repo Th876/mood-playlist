@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match My Mood Playlist</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- My Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particle animation effects -->
+  <canvas id="particles"></canvas>
+
+  <div class="container text-center">
+    <h1>Match My Mood <i class="fa-solid fa-music"></i></h1>
+    <h2>Playlist</h2>
+    <h3>How are you feeling today?</h3>
+
+    <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center emoji-grid">
+      <div class="col">
+        <div class="emoji-item d-flex flex-column align-items-center mood-option" data-mood="Hype">
+          <img src="images/hype.png" alt="Hype" class="mb-2">
+          <p>Hype</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="emoji-item d-flex flex-column align-items-center mood-option" data-mood="Chill">
+          <img src="images/chill.png" alt="Chill" class="mb-2">
+          <p>Chill</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="emoji-item d-flex flex-column align-items-center mood-option" data-mood="Sad">
+          <img src="images/sad.png" alt="Sad" class="mb-2">
+          <p>Sad</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="emoji-item d-flex flex-column align-items-center mood-option" data-mood="Romantic">
+          <img src="images/romantic.png" alt="Romantic" class="mb-2">
+          <p>Romantic</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="emoji-item d-flex flex-column align-items-center mood-option" data-mood="Nostalgic">
+          <img src="images/nostalgic.png" alt="Nostalgic" class="mb-2">
+          <p>Nostalgic</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="emoji-item d-flex flex-column align-items-center mood-option" data-mood="Angry">
+          <img src="images/angry.png" alt="Angry" class="mb-2">
+          <p>Angry</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="emoji-item d-flex flex-column align-items-center mood-option" data-mood="Motivated">
+          <img src="images/motivated.png" alt="Motivated" class="mb-2">
+          <p>Motivated</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="emoji-item d-flex flex-column align-items-center mood-option" data-mood="Dreamy">
+          <img src="images/dreamy.png" alt="Dreamy" class="mb-2">
+          <p>Dreamy</p>
+        </div>
+      </div>
+    </div>
+    </div> 
+<!-- Loader -->
+  <div id="loader" class="text-center mt-5" style="display: none;">
+    <i class="fas fa-music fa-3x heartbeat"></i>
+    <p class="mt-3 loader-text">Making the Playlist of Your Dreams...<i class="fa-solid fa-star"><i class="fa-solid fa-star small-star"></i></i></p>
+  </div>    
+      
+  <footer class="text-center mt-5 fixed-footer">
+    <p>&copy; 2025 Tahaylia Higgins | <a href="#" class="terms-policy">Terms Policy</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+ 
+

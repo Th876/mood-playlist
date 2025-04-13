@@ -15,13 +15,13 @@ Match My Mood Playlist is a web app that generates personalized YouTube playlist
 - **Deployment:** AWS API Gateway, Lambda
 - **Authentication:** API keys stored securely in Lambda environment variables
 
-## How It Works 🤖
+## How It Works 
 1. **User Input:** Users select their mood from predefined options (e.g., hype, chill, sad).
 2. **Fetching Playlist:** The frontend makes a request to the AWS Lambda function and passes the mood as a query parameter.
 3. **YouTube API Interaction:** Lambda function processes the request, calls the YouTube API, and filters videos based on the mood.
 4. **Displaying Videos:** A playlist recommendation is returned and displayed to the user. Each playlist link opens in a new tab and auto-plays for an engaging user experience.
 
-## Challenges Faced 🛠️
+## Challenges Faced 
 
 ### Embedding YouTube Videos
 I initially attempted to embed YouTube videos directly into the web app. However, I encountered a limitation with the YouTube API: **embedding was not allowed** in the context of this app. This constraint forced me to rethink the user interaction design. Instead of embedding videos, I decided to open the videos in a **new tab** with **auto-play** enabled. This change was essential for improving the user experience, as it allowed users to immediately enjoy the playlist without waiting for the video to load. 
@@ -32,23 +32,13 @@ Setting up the AWS Lambda function initially presented a challenge. After deploy
 
 Upon further investigation, I realized that the **Lambda function URL** wasn’t properly set up to communicate with the YouTube API. After running tests and adjusting the Lambda function’s configuration, I was able to fix the URL and ensure that the YouTube API returned the expected data.
 
-### UX Considerations
-The **auto-play** feature for the videos was an intentional design choice aimed at providing the best possible user experience. By automatically playing the video in a new tab, users could quickly dive into the playlist without any unnecessary interruptions. This feature was designed to improve the overall flow of the app, especially considering the dynamic and fast-paced nature of the app's purpose—matching moods to music.
 
-## Getting Started 💻
+## Getting Started 
 
 To run the project locally, follow these steps:
-
-### Prerequisites 🔑
-- **AWS Account**: To deploy the Lambda function and API Gateway.
-- **Node.js**: For running JavaScript code locally (optional for testing).
-- **API Key**: You'll need to generate a YouTube API key for the Lambda function.
-
-### Steps 📝
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/match-my-mood-playlist.git
+   git clone https://github.com/yourusername/mood-playlist.git
    cd match-my-mood-playlist
-# mood-playlist

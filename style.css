@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Special+Gothic+Expanded+One&display=swap');
+
+:root {
+  --yellow: #FFF9C4;
+  --blue: #3B82F6;
+  --darkblue: #003487;
+  --lightblue: #67cbf6;
+}
+
+@font-face {
+  font-family: 'Don Jose Black';
+  src: url('fonts/DonJose_Black.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--yellow); /* Page starts with yellow */
+  color: var(--blue);
+  z-index: 3;
+  transition: background-color 3s ease-in-out;
+  animation: backgroundColorChange 30s ease-in-out infinite; /* smooth background change animation */
+  overflow: hidden;
+}
+
+/* Background gradient animation colors */
+@keyframes backgroundColorChange {
+  0% {
+    background-color: var(--yellow); /* Start with yellow */
+  }
+  25% {
+    background-color: #FFB6C1; /* Pastel Pink */
+  }
+  50% {
+    background-color: #B3E5FC; /* Light Blue */
+  }
+  75% {
+    background-color: #D1C4E9; /* Lavender */
+  }
+  100% {
+    background-color: #FFF9C4; /* Return to yellow */
+  }
+}
+
+/* Center emoji grid horizontally */
+.container {
+  margin-top: 15px;
+  background: none; /* No background on container */
+  z-index: 2;
+  display: flex; 
+  flex-direction: column;
+  align-items: center; /* Center the items inside the container */
+}
+
+div p {
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid var(--blue);
+    width: 100px;
+    color: var(--blue);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+div p:hover {
+  background-color: var(--darkblue);
+  color: var(--yellow);
+  border: 2px solid var(--lightblue);
+ transition: background-color .3s ease-in-out;
+} 
+
+h1, h2, h3 {
+  font-family: 'Don Jose Black';
+  z-index: 3;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: -15px;
+}
+
+h3 {
+  font-weight: normal;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%; 
+  max-width: 800px; 
+  justify-items: center; 
+  padding-bottom: 100px;
+}
+
+
+.emoji-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  z-index: 3;
+}
+
+.emoji-item:hover {
+  transform: scale(1.2); /* Scale emoji on hover */
+}
+
+.emoji-item {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Style p tag inside .emoji-item */
+.emoji-item p {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  border: 2px solid var(--blue);
+  width: 100px;
+  color: var(--blue);
+  border-radius: 10px;
+  padding: 5px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Apply styles only to the p tag on hover */
+.emoji-item:hover p {
+  background-color: var(--darkblue);
+  color: var(--yellow);
+  border: 2px solid var(--lightblue);
+}
+
+
+.fa-music {
+  font-size: 2.5rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  font-size: 0.65rem;
+  padding-bottom: 1px;
+  padding-top: 15px;
+  letter-spacing: 1px;
+  color: var(--yellow);
+  text-align: center;
+  background-color: var(--blue);
+  font-family: 'Special Gothic Expanded One';
+}
+
+footer a.terms-policy {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+footer a.terms-policy:hover {
+  text-decoration: underline;
+}
+
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Particles won't block interactions with other elements */
+  z-index: 0; /* Keep particles behind other content */
+
+}
+
+/* Playlist loader */
+#loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s infinite;
+  font-size: 6rem; 
+  margin-right: 30px;
+}
+
+.loader-text {
+  font-size: 1rem;
+  border: none;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.loader-text:hover {
+  background-color: transparent;
+  border: none;
+  color: var(--blue);
+}
+
+.small-star {
+  font-size: 0.4rem;
+  position: absolute;
+  bottom: 57px;
+  right: -5px;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.3);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+/* Media queries */
+@media (max-width: 765px) {
+  body {
+    overflow-y: scroll;
+  }
+  h1 {
+    font-weight: 800;
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 0px;
+    font-family: 'Don Jose Black';
+  }
+
+  .emoji-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    margin-top: 50px;
+    width: 100%; 
+    max-width: 800px; 
+    justify-items: center; 
+    padding-bottom: 100px;
+  }
+  
+  .emoji-item {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .emoji-item:hover {
+    transform: scale(1.2); 
+  }
+  
+  .emoji-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  .emoji-item p {
+    text-align: center;
+  }
+
+  footer {
+    z-index: 10;
+  }
+  
+}
+
+
+@media (max-width: 576px) {
+
+  body {
+    overflow-y: scroll;
+  }
+  /* Shrink emojis on small screens */
+  .emoji-item img {
+    max-width: 70px;
+  }
+
+  .emoji-grid {
+    padding-bottom: 100px;
+  }
+  footer {
+    z-index: 10;
+  }
+
+}
