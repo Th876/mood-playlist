@@ -11,7 +11,7 @@ Match My Mood Playlist is a web app that generates personalized YouTube playlist
 - Real-time fetching and display of playlist data.
   
 ## Technologies Used 
-- **Frontend:** HTML, CSS, JavaScript (ES6+)
+- **Frontend:** HTML, CSS, JavaScript
 - **Backend:** AWS Lambda (Node.js)
 - **API:** YouTube Data API v3
 - **Deployment:** AWS API Gateway, Lambda
