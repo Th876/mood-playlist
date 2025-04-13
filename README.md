@@ -1,3 +1,5 @@
+![Mood My Mood Playlist Cover](images/screenshot.png)
+
 # Match My Mood Playlist 
 
 Match My Mood Playlist is a web app that generates personalized YouTube playlists based on your current mood.
