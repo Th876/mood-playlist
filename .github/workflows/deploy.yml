@@ -13,11 +13,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
+    # Debugging step to print AWS_S3_BUCKET to check if the value is set correctly
     - name: Print AWS_S3_BUCKET for debugging
       run: echo "AWS_S3_BUCKET = $AWS_S3_BUCKET"
       env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
 
+    # Sync code to S3 bucket
     - name: Sync to S3
       uses: jakejarvis/s3-sync-action@master
       with:
