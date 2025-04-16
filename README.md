@@ -4,6 +4,10 @@
 
 Match My Mood Playlist is a web app that generates personalized YouTube playlists based on your current mood.
 
+## Live Link
+[Match My Mood Playlist](https://d2jssjyx46d2r.cloudfront.net/)
+
+
 ## Features 
 - Personalized playlist generation based on mood.
 - Videos fetched using the YouTube API via an AWS Lambda function.
@@ -14,7 +18,7 @@ Match My Mood Playlist is a web app that generates personalized YouTube playlist
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** AWS Lambda (Node.js)
 - **API:** YouTube Data API v3
-- **Deployment:** AWS API Gateway, Lambda
+- **Deployment:** AWS S3, CloudFront CDN, API Gateway, Lambda
 - **Authentication:** API keys stored securely in Lambda environment variables
 
 ## How It Works 
