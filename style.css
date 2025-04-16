@@ -150,8 +150,8 @@ h3 {
 }
 
 footer {
-  position: fixed;
-  bottom: 0px;
+  position: relative;
+  top: -100px;
   width: 100%;
   font-size: 0.65rem;
   padding-bottom: 1px;
@@ -256,7 +256,7 @@ footer a.terms-policy:hover {
     width: 100%; 
     max-width: 800px; 
     justify-items: center; 
-    padding-bottom: 100px;
+    padding-bottom: 10px;
   }
   
   .emoji-item {
@@ -279,6 +279,8 @@ footer a.terms-policy:hover {
   }
 
   footer {
+    position: relative;
+    top: 0px;
     z-index: 10;
   }
   
@@ -296,7 +298,7 @@ footer a.terms-policy:hover {
   }
 
   .emoji-grid {
-    padding-bottom: 100px;
+    padding-bottom: 10px;
   }
   footer {
     z-index: 10;
