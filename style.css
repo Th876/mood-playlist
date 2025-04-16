@@ -150,8 +150,8 @@ h3 {
 }
 
 footer {
-  position: relative;
-  top: -100px;
+  position: absolute;
+  bottom: -10px;
   width: 100%;
   font-size: 0.65rem;
   padding-bottom: 1px;
@@ -256,7 +256,7 @@ footer a.terms-policy:hover {
     width: 100%; 
     max-width: 800px; 
     justify-items: center; 
-    padding-bottom: 10px;
+    padding-bottom: 100px;
   }
   
   .emoji-item {
@@ -279,29 +279,11 @@ footer a.terms-policy:hover {
   }
 
   footer {
-    position: relative;
-    top: 0px;
-    z-index: 10;
+    position: absolute;
+    bottom: -450px;
+    background-color: red;
   }
   
 }
 
 
-@media (max-width: 576px) {
-
-  body {
-    overflow-y: scroll;
-  }
-  /* Shrink emojis on small screens */
-  .emoji-item img {
-    max-width: 70px;
-  }
-
-  .emoji-grid {
-    padding-bottom: 10px;
-  }
-  footer {
-    z-index: 10;
-  }
-
-}
